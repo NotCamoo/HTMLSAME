@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PYQ & FAQ Vault</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell pyq-page">
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <div class="sidebar-header">
+            <h1 class="brand">
+              <a class="brand-link" href="index.html">
+                <span class="brand-full">Mevina</span>
+                <span class="brand-short">LA</span>
+              </a>
+            </h1>
+            <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Collapse sidebar" aria-expanded="true">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path>
+              </svg>
+            </button>
+          </div>
+          <p class="brand-subtitle">Academic Excellence</p>
+          <nav class="nav-group primary-nav" aria-label="Primary">
+            <a class="nav-item" href="index.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="5" rx="1.5"></rect><rect x="13" y="11" width="7" height="9" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect></svg></span><span class="nav-label">Dashboard</span></a>
+            <a class="nav-item" href="notes.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5h10v14H8a3 3 0 0 0-3 3V8a3 3 0 0 1 3-3Z"></path><path d="M8 5v14"></path><path d="M11 9h5"></path><path d="M11 12h5"></path></svg></span><span class="nav-label">Notes</span></a>
+            <a class="nav-item" href="videos.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="6" width="16" height="12" rx="2"></rect><path d="m10 10 5 2-5 2v-4Z"></path></svg></span><span class="nav-label">Videos</span></a>
+            <a class="nav-item" href="flashcards.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="7" height="14" rx="1.5"></rect><rect x="13" y="5" width="7" height="14" rx="1.5"></rect><path d="M8 8h0"></path><path d="M16 8h0"></path></svg></span><span class="nav-label">Flashcards</span></a>
+            <a class="nav-item active" href="pyq-faq.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8"></circle><path d="M9.5 9a2.5 2.5 0 1 1 4.2 1.8c-.8.7-1.2 1.1-1.2 2.2"></path><path d="M12 16h.01"></path></svg></span><span class="nav-label">PYQ/FAQ</span></a>
+          </nav>
+        </div>
+        <nav class="nav-group secondary-nav" aria-label="Secondary">
+          <a class="nav-item" href="#"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3"></circle><path d="M6 18a6 6 0 0 1 12 0"></path></svg></span><span class="nav-label">Profile</span></a>
+          <a class="nav-item" href="#"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.7 2.1 2.6-.2.7 2.5 2.3 1.2-1.2 2.3 1.2 2.3-2.3 1.2-.7 2.5-2.6-.2L12 21l-1.7-2.1-2.6.2-.7-2.5-2.3-1.2 1.2-2.3-1.2-2.3 2.3-1.2.7-2.5 2.6.2L12 3Z"></path><circle cx="12" cy="12" r="2.5"></circle></svg></span><span class="nav-label">Settings</span></a>
+          <a class="nav-item" href="#"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 6h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H9l-4 3v-3H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"></path><path d="M8 10h8"></path><path d="M8 13h5"></path></svg></span><span class="nav-label">Feedback</span></a>
+        </nav>
+      </aside>
+      <button class="sidebar-peek" id="sidebarPeek" type="button" aria-label="Slide to show sidebar"><span class="peek-grip" aria-hidden="true"></span></button>
+
+      <div class="main-area">
+        <header class="top-bar">
+          <div class="top-left">
+            <button class="icon-btn sidebar-hide-btn" id="hideSidebarBtn" type="button" aria-label="Hide sidebar">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+            </button>
+            <p class="product-name">StudyLounge</p>
+            <div class="search-box" aria-label="Search resources">Search your library...</div>
+          </div>
+          <div class="top-right">
+            <button class="icon-btn" aria-label="Notifications">!</button>
+            <div class="avatar" aria-hidden="true">AR</div>
+          </div>
+        </header>
+
+        <main class="content-area">
+          <section class="vault-hero pyq-hero">
+            <p class="hero-kicker">Knowledge Base</p>
+            <h2>PYQ &amp; FAQ Vault</h2>
+            <p>Access a decade of curated previous year questions and academic insights for exam precision.</p>
+          </section>
+
+          <section class="pyq-highlight-grid">
+            <article class="card pyq-paper-card">
+              <h3>2023 Advanced Calculus</h3>
+              <p>Fully solved paper with step-by-step logic and alternate solution paths.</p>
+              <button class="session-btn" type="button">Get PDF</button>
+            </article>
+            <article class="card pyq-stats-card">
+              <h3>1,200+</h3>
+              <p>Solved Questions</p>
+              <div class="progress-track"><span class="progress-fill w-80"></span></div>
+            </article>
+          </section>
+
+          <section class="faq-block">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-chip-row">
+              <span class="chip">Exam Policy</span><span class="chip">Grading</span><span class="chip">Materials</span>
+            </div>
+            <div class="faq-list">
+              <article class="faq-item">How are subjective answers evaluated in internal assessments?</article>
+              <article class="faq-item">Can I request a re-evaluation for my mock exam papers?</article>
+              <article class="faq-item">Are the PYQ solutions reviewed by academic heads?</article>
+            </div>
+          </section>
+
+          <section class="archive-block">
+            <h3>Archive Explorer</h3>
+            <div class="card archive-table-wrap">
+              <table class="archive-table">
+                <thead>
+                  <tr><th>Course Code</th><th>Subject Name</th><th>Semester/Year</th><th>Difficulty</th><th>Action</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>CS102</td><td>Data Structures & Algorithms</td><td>Winter 2022</td><td><span class="difficulty hard">Hard</span></td><td><a href="#">View Paper</a></td></tr>
+                  <tr><td>MA201</td><td>Linear Algebra</td><td>Summer 2021</td><td><span class="difficulty medium">Medium</span></td><td><a href="#">View Paper</a></td></tr>
+                  <tr><td>PH101</td><td>Quantum Mechanics I</td><td>Winter 2021</td><td><span class="difficulty expert">Expert</span></td><td><a href="#">View Paper</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="ai-chat-bubble" aria-label="AI chat bubble">
+            <div class="ai-bubble-header">
+              <div><h4>AI Study Assistant</h4><p>Always available</p></div>
+              <span class="bubble-status">Online</span>
+            </div>
+            <div class="ai-bubble-thread"></div>
+            <div class="ai-bubble-input-row">
+              <input class="ai-bubble-input" type="text" placeholder="Ask your assistant..." />
+              <button class="ai-bubble-send" type="button" aria-label="Send">→</button>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      const hideSidebarBtn = document.getElementById("hideSidebarBtn");
+      const sidebarPeek = document.getElementById("sidebarPeek");
+      const root = document.body;
+      sidebarToggle.addEventListener("click", () => {
+        const isCollapsed = root.classList.toggle("sidebar-collapsed");
+        sidebarToggle.setAttribute("aria-expanded", String(!isCollapsed));
+        sidebarToggle.setAttribute("aria-label", isCollapsed ? "Expand sidebar" : "Collapse sidebar");
+      });
+      const updateHideButtonState = () => {
+        const isHidden = root.classList.contains("sidebar-hidden");
+        hideSidebarBtn.classList.toggle("is-flipped", isHidden);
+        hideSidebarBtn.setAttribute("aria-label", isHidden ? "Show sidebar" : "Hide sidebar");
+      };
+      const showSidebar = () => { root.classList.remove("sidebar-hidden"); updateHideButtonState(); };
+      const hideSidebar = () => { root.classList.remove("sidebar-collapsed"); root.classList.add("sidebar-hidden"); updateHideButtonState(); };
+      hideSidebarBtn.addEventListener("click", () => root.classList.contains("sidebar-hidden") ? showSidebar() : hideSidebar());
+      sidebarPeek.addEventListener("click", showSidebar);
+      let dragStartX = 0; let isDraggingPeek = false;
+      sidebarPeek.addEventListener("pointerdown", (event) => { isDraggingPeek = true; dragStartX = event.clientX; sidebarPeek.setPointerCapture(event.pointerId); });
+      sidebarPeek.addEventListener("pointermove", (event) => { if (isDraggingPeek && event.clientX - dragStartX > 60) { showSidebar(); isDraggingPeek = false; } });
+      const endPeekDrag = () => { isDraggingPeek = false; };
+      sidebarPeek.addEventListener("pointerup", endPeekDrag); sidebarPeek.addEventListener("pointercancel", endPeekDrag);
+      window.addEventListener("resize", () => { if (window.innerWidth <= 980) { root.classList.remove("sidebar-hidden"); updateHideButtonState(); } });
+      updateHideButtonState();
+    </script>
+  </body>
+</html>
