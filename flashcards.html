@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashcard Vault</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell flashcards-page">
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <div class="sidebar-header">
+            <h1 class="brand">
+              <a class="brand-link" href="index.html">
+                <span class="brand-full">Mevina</span>
+                <span class="brand-short">LA</span>
+              </a>
+            </h1>
+            <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Collapse sidebar" aria-expanded="true">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path>
+              </svg>
+            </button>
+          </div>
+          <p class="brand-subtitle">Study Mode</p>
+          <nav class="nav-group primary-nav" aria-label="Primary">
+            <a class="nav-item" href="index.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="5" rx="1.5"></rect><rect x="13" y="11" width="7" height="9" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect></svg></span><span class="nav-label">Dashboard</span></a>
+            <a class="nav-item" href="notes.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5h10v14H8a3 3 0 0 0-3 3V8a3 3 0 0 1 3-3Z"></path><path d="M8 5v14"></path><path d="M11 9h5"></path><path d="M11 12h5"></path></svg></span><span class="nav-label">Notes</span></a>
+            <a class="nav-item" href="videos.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="6" width="16" height="12" rx="2"></rect><path d="m10 10 5 2-5 2v-4Z"></path></svg></span><span class="nav-label">Videos</span></a>
+            <a class="nav-item active" href="flashcards.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="7" height="14" rx="1.5"></rect><rect x="13" y="5" width="7" height="14" rx="1.5"></rect><path d="M8 8h0"></path><path d="M16 8h0"></path></svg></span><span class="nav-label">Flashcards</span></a>
+            <a class="nav-item" href="pyq-faq.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8"></circle><path d="M9.5 9a2.5 2.5 0 1 1 4.2 1.8c-.8.7-1.2 1.1-1.2 2.2"></path><path d="M12 16h.01"></path></svg></span><span class="nav-label">PYQ/FAQ</span></a>
+          </nav>
+        </div>
+        <nav class="nav-group secondary-nav" aria-label="Secondary">
+          <a class="nav-item" href="#"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3"></circle><path d="M6 18a6 6 0 0 1 12 0"></path></svg></span><span class="nav-label">Profile</span></a>
+          <a class="nav-item" href="#"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.7 2.1 2.6-.2.7 2.5 2.3 1.2-1.2 2.3 1.2 2.3-2.3 1.2-.7 2.5-2.6-.2L12 21l-1.7-2.1-2.6.2-.7-2.5-2.3-1.2 1.2-2.3-1.2-2.3 2.3-1.2.7-2.5 2.6.2L12 3Z"></path><circle cx="12" cy="12" r="2.5"></circle></svg></span><span class="nav-label">Settings</span></a>
+          <a class="nav-item" href="#"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 6h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H9l-4 3v-3H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"></path><path d="M8 10h8"></path><path d="M8 13h5"></path></svg></span><span class="nav-label">Help</span></a>
+        </nav>
+      </aside>
+
+      <button class="sidebar-peek" id="sidebarPeek" type="button" aria-label="Slide to show sidebar"><span class="peek-grip" aria-hidden="true"></span></button>
+
+      <div class="main-area">
+        <header class="top-bar">
+          <div class="top-left">
+            <button class="icon-btn sidebar-hide-btn" id="hideSidebarBtn" type="button" aria-label="Hide sidebar">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+            </button>
+            <p class="product-name">StudyLounge</p>
+            <div class="search-box" aria-label="Search flashcards">Search your flashcards...</div>
+          </div>
+          <div class="top-right">
+            <button class="icon-btn" aria-label="Notifications">!</button>
+            <div class="avatar" aria-hidden="true">AR</div>
+          </div>
+        </header>
+
+        <main class="content-area">
+          <section class="vault-hero">
+            <h2>Flashcard Vault</h2>
+            <p>Your personal lab for active recall. Scientific retention, one card at a time.</p>
+          </section>
+
+          <section class="decks-header">
+            <h3>Your Decks</h3>
+            <div class="deck-tools">
+              <button class="icon-btn small" type="button">≡</button>
+              <button class="icon-btn small" type="button">▦</button>
+            </div>
+          </section>
+
+          <section class="flashcards-grid" id="staticDecks">
+            <article class="card deck-card create-deck">
+              <div class="create-plus">+</div>
+              <p>Create New Deck</p>
+            </article>
+            <article class="card deck-card" data-deck-key="organic-chemistry">
+              <span class="tile-icon">⚗</span>
+              <h3>Organic Chemistry</h3>
+              <p>Functional groups and reaction mechanisms.</p>
+              <div class="deck-footer"><span>3 Cards</span><button class="session-btn study-btn" type="button">Study</button></div>
+            </article>
+            <article class="card deck-card" data-deck-key="advanced-calculus">
+              <span class="tile-icon rose">Σ</span>
+              <h3>Advanced Calculus</h3>
+              <p>Taylor series and multiple integrals.</p>
+              <div class="deck-footer"><span>3 Cards</span><button class="session-btn study-btn" type="button">Study</button></div>
+            </article>
+            <article class="card deck-card" data-deck-key="cognitive-neuroscience">
+              <span class="tile-icon cyan">◎</span>
+              <h3>Cognitive Neuroscience</h3>
+              <p>Memory encoding and neural pathways.</p>
+              <div class="deck-footer"><span>3 Cards</span><button class="session-btn study-btn" type="button">Study</button></div>
+            </article>
+            <article class="card deck-card" data-deck-key="medical-terminology">
+              <span class="tile-icon rose">⊕</span>
+              <h3>Medical Terminology</h3>
+              <p>Greek and Latin roots in medicine.</p>
+              <div class="deck-footer"><span>3 Cards</span><button class="session-btn study-btn" type="button">Study</button></div>
+            </article>
+          </section>
+
+          <section class="flashcards-grid" id="dynamicDecks"></section>
+
+          <section class="ai-chat-bubble" aria-label="AI chat bubble">
+            <div class="ai-bubble-header">
+              <div>
+                <h4>AI Study Assistant</h4>
+                <p>Always available</p>
+              </div>
+              <span class="bubble-status">Online</span>
+            </div>
+            <div class="ai-bubble-thread"></div>
+            <div class="ai-bubble-input-row">
+              <input
+                class="ai-bubble-input"
+                type="text"
+                placeholder="Ask your assistant..."
+              />
+              <button class="ai-bubble-send" type="button" aria-label="Send">→</button>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div class="deck-modal-backdrop" id="deckModalBackdrop">
+      <section class="deck-modal card" aria-label="Create new flashcard deck">
+        <div class="deck-modal-head">
+          <h3>Create New Deck</h3>
+          <button class="icon-btn small" id="closeDeckModal" type="button" aria-label="Close">×</button>
+        </div>
+        <div class="deck-form-grid">
+          <label>
+            Chapter
+            <input id="deckChapter" class="ai-bubble-input" type="text" placeholder="e.g. Advanced Calculus" />
+          </label>
+          <label>
+            Related Notes Topic
+            <input id="deckNotesTopic" class="ai-bubble-input" type="text" placeholder="e.g. Notes chapter title" />
+          </label>
+        </div>
+        <div id="flashcardRows" class="flashcard-rows"></div>
+        <div class="deck-modal-actions">
+          <button class="session-btn" id="addFlashcardRow" type="button">+ Add Flashcard</button>
+          <button class="session-btn" id="saveDeckBtn" type="button">Save Deck</button>
+        </div>
+        <p id="deckStatus" class="deck-status"></p>
+      </section>
+    </div>
+
+    <div class="deck-modal-backdrop" id="studyModalBackdrop">
+      <section class="deck-modal card study-modal" aria-label="Study flashcards">
+        <div class="deck-modal-head">
+          <h3 id="studyDeckTitle">Study Deck</h3>
+          <button class="icon-btn small" id="closeStudyModal" type="button" aria-label="Close">×</button>
+        </div>
+        <p class="study-progress" id="studyProgress"></p>
+        <div class="study-card">
+          <h4>Question</h4>
+          <p id="studyQuestion"></p>
+          <div id="studyAnswerWrap" class="study-answer-wrap" hidden>
+            <h4>Answer</h4>
+            <p id="studyAnswer"></p>
+          </div>
+        </div>
+        <div class="deck-modal-actions">
+          <button class="session-btn" id="revealAnswerBtn" type="button">Reveal Answer</button>
+          <button class="session-btn" id="nextFlashcardBtn" type="button">Next</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="deck-modal-backdrop" id="deleteConfirmBackdrop">
+      <section class="deck-modal card confirm-modal" aria-label="Delete deck confirmation">
+        <div class="deck-modal-head">
+          <h3>Delete Deck</h3>
+          <button class="icon-btn small" id="closeDeleteConfirm" type="button" aria-label="Close">×</button>
+        </div>
+        <p id="deleteConfirmText" class="deck-status">
+          Are you sure you want to delete this deck?
+        </p>
+        <div class="deck-modal-actions">
+          <button class="session-btn" id="cancelDeleteBtn" type="button">Cancel</button>
+          <button class="session-btn delete-deck-btn" id="confirmDeleteBtn" type="button">Delete</button>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      const hideSidebarBtn = document.getElementById("hideSidebarBtn");
+      const sidebarPeek = document.getElementById("sidebarPeek");
+      const root = document.body;
+      sidebarToggle.addEventListener("click", () => {
+        const isCollapsed = root.classList.toggle("sidebar-collapsed");
+        sidebarToggle.setAttribute("aria-expanded", String(!isCollapsed));
+        sidebarToggle.setAttribute("aria-label", isCollapsed ? "Expand sidebar" : "Collapse sidebar");
+      });
+      const updateHideButtonState = () => {
+        const isHidden = root.classList.contains("sidebar-hidden");
+        hideSidebarBtn.classList.toggle("is-flipped", isHidden);
+        hideSidebarBtn.setAttribute("aria-label", isHidden ? "Show sidebar" : "Hide sidebar");
+      };
+      const showSidebar = () => { root.classList.remove("sidebar-hidden"); updateHideButtonState(); };
+      const hideSidebar = () => { root.classList.remove("sidebar-collapsed"); root.classList.add("sidebar-hidden"); updateHideButtonState(); };
+      hideSidebarBtn.addEventListener("click", () => root.classList.contains("sidebar-hidden") ? showSidebar() : hideSidebar());
+      sidebarPeek.addEventListener("click", showSidebar);
+      let dragStartX = 0; let isDraggingPeek = false;
+      sidebarPeek.addEventListener("pointerdown", (event) => { isDraggingPeek = true; dragStartX = event.clientX; sidebarPeek.setPointerCapture(event.pointerId); });
+      sidebarPeek.addEventListener("pointermove", (event) => { if (isDraggingPeek && event.clientX - dragStartX > 60) { showSidebar(); isDraggingPeek = false; } });
+      const endPeekDrag = () => { isDraggingPeek = false; };
+      sidebarPeek.addEventListener("pointerup", endPeekDrag); sidebarPeek.addEventListener("pointercancel", endPeekDrag);
+      window.addEventListener("resize", () => { if (window.innerWidth <= 980) { root.classList.remove("sidebar-hidden"); updateHideButtonState(); } });
+      updateHideButtonState();
+
+      const API = "http://127.0.0.1:5000";
+      const createDeckCard = document.querySelector(".create-deck");
+      const modalBackdrop = document.getElementById("deckModalBackdrop");
+      const closeDeckModal = document.getElementById("closeDeckModal");
+      const addRowBtn = document.getElementById("addFlashcardRow");
+      const saveDeckBtn = document.getElementById("saveDeckBtn");
+      const flashcardRows = document.getElementById("flashcardRows");
+      const deckStatus = document.getElementById("deckStatus");
+      const dynamicDecks = document.getElementById("dynamicDecks");
+      const staticDecks = document.getElementById("staticDecks");
+      const studyModalBackdrop = document.getElementById("studyModalBackdrop");
+      const closeStudyModal = document.getElementById("closeStudyModal");
+      const studyDeckTitle = document.getElementById("studyDeckTitle");
+      const studyProgress = document.getElementById("studyProgress");
+      const studyQuestion = document.getElementById("studyQuestion");
+      const studyAnswer = document.getElementById("studyAnswer");
+      const studyAnswerWrap = document.getElementById("studyAnswerWrap");
+      const revealAnswerBtn = document.getElementById("revealAnswerBtn");
+      const nextFlashcardBtn = document.getElementById("nextFlashcardBtn");
+      const deleteConfirmBackdrop = document.getElementById("deleteConfirmBackdrop");
+      const closeDeleteConfirm = document.getElementById("closeDeleteConfirm");
+      const cancelDeleteBtn = document.getElementById("cancelDeleteBtn");
+      const confirmDeleteBtn = document.getElementById("confirmDeleteBtn");
+      const deleteConfirmText = document.getElementById("deleteConfirmText");
+
+      const staticDeckData = {
+        "organic-chemistry": [
+          { question: "What is a functional group?", answer: "A specific group of atoms that defines characteristic reactions of a molecule." },
+          { question: "What is an electrophile?", answer: "A species that accepts an electron pair in a reaction." },
+          { question: "Name one nucleophilic substitution type.", answer: "SN1 or SN2." },
+        ],
+        "advanced-calculus": [
+          { question: "What does Taylor series approximate?", answer: "A function near a point using polynomial terms." },
+          { question: "When does a series converge absolutely?", answer: "When the series of absolute values converges." },
+          { question: "What is the gradient?", answer: "Vector of partial derivatives showing steepest ascent direction." },
+        ],
+        "cognitive-neuroscience": [
+          { question: "What is long-term potentiation?", answer: "Persistent strengthening of synapses based on recent activity." },
+          { question: "Which brain region is key for memory formation?", answer: "The hippocampus." },
+          { question: "What is working memory?", answer: "Short-term holding/manipulation of information for tasks." },
+        ],
+        "medical-terminology": [
+          { question: "Meaning of prefix 'brady-'?", answer: "Slow." },
+          { question: "Meaning of suffix '-itis'?", answer: "Inflammation." },
+          { question: "Meaning of root 'cardi-'?", answer: "Heart." },
+        ],
+      };
+
+      let activeStudyCards = [];
+      let activeStudyIndex = 0;
+      let activeStudyTitle = "";
+      let pendingDeleteCard = null;
+      let pendingDeleteDeckId = "";
+
+      const openDeckModal = () => {
+        modalBackdrop.classList.add("open");
+        deckStatus.textContent = "";
+      };
+
+      const closeModal = () => {
+        modalBackdrop.classList.remove("open");
+      };
+
+      const addFlashcardRow = (question = "", answer = "") => {
+        const row = document.createElement("div");
+        row.className = "flashcard-row";
+        row.innerHTML = `
+          <input class="ai-bubble-input question-input" type="text" placeholder="Question" value="${question.replace(/"/g, "&quot;")}" />
+          <input class="ai-bubble-input answer-input" type="text" placeholder="Answer" value="${answer.replace(/"/g, "&quot;")}" />
+          <button class="icon-btn small remove-row" type="button" aria-label="Remove">−</button>
+        `;
+        row.querySelector(".remove-row").addEventListener("click", () => row.remove());
+        flashcardRows.appendChild(row);
+      };
+
+      const renderDeckCard = (deck) => {
+        const card = document.createElement("article");
+        card.className = "card deck-card";
+        card.dataset.deckId = deck.id;
+        card.innerHTML = `
+          <span class="tile-icon">📘</span>
+          <h3>${deck.chapter}</h3>
+          <p>Linked notes: ${deck.notesTopic || "Not provided"}</p>
+          <div class="deck-footer">
+            <span>${deck.cardCount} Cards</span>
+            <div class="deck-action-group">
+              <button class="session-btn study-btn" type="button">Study</button>
+              <button class="session-btn delete-deck-btn" type="button">Delete</button>
+            </div>
+          </div>
+        `;
+        card._cards = deck.cards || [];
+        dynamicDecks.appendChild(card);
+      };
+
+      const renderStudyCard = () => {
+        const total = activeStudyCards.length;
+        const current = activeStudyCards[activeStudyIndex];
+        studyDeckTitle.textContent = activeStudyTitle;
+        studyProgress.textContent = `Card ${activeStudyIndex + 1} of ${total}`;
+        studyQuestion.textContent = current?.question || "No question available.";
+        studyAnswer.textContent = current?.answer || "No answer available.";
+        studyAnswerWrap.hidden = true;
+      };
+
+      const openStudyModal = (title, cards) => {
+        if (!cards || !cards.length) {
+          deckStatus.textContent = "This deck has no flashcards yet.";
+          return;
+        }
+        activeStudyTitle = title;
+        activeStudyCards = cards;
+        activeStudyIndex = 0;
+        renderStudyCard();
+        studyModalBackdrop.classList.add("open");
+      };
+
+      const closeStudy = () => {
+        studyModalBackdrop.classList.remove("open");
+      };
+
+      const openDeleteConfirm = (card, deckId, title) => {
+        pendingDeleteCard = card;
+        pendingDeleteDeckId = deckId;
+        deleteConfirmText.textContent = `Are you sure you want to delete "${title}"?`;
+        deleteConfirmBackdrop.classList.add("open");
+      };
+
+      const closeDeleteModal = () => {
+        pendingDeleteCard = null;
+        pendingDeleteDeckId = "";
+        deleteConfirmBackdrop.classList.remove("open");
+      };
+
+      const loadDecks = async () => {
+        dynamicDecks.innerHTML = "";
+        try {
+          const response = await fetch(`${API}/decks`);
+          const data = await response.json();
+          (data.decks || []).forEach(renderDeckCard);
+        } catch {
+          deckStatus.textContent = "Could not load decks. Start backend/app.py.";
+        }
+      };
+
+      createDeckCard.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        openDeckModal();
+      });
+      closeDeckModal.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        closeModal();
+      });
+      modalBackdrop.addEventListener("click", (event) => {
+        if (event.target === modalBackdrop) closeModal();
+      });
+      addRowBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        addFlashcardRow();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modalBackdrop.classList.contains("open")) {
+          closeModal();
+        }
+        if (event.key === "Escape" && studyModalBackdrop.classList.contains("open")) {
+          closeStudy();
+        }
+      });
+
+      staticDecks.addEventListener("click", (event) => {
+        const btn = event.target.closest(".study-btn");
+        if (!btn) return;
+        const card = btn.closest(".deck-card");
+        const key = card?.dataset.deckKey;
+        const title = card?.querySelector("h3")?.textContent?.trim() || "Study Deck";
+        openStudyModal(title, staticDeckData[key] || []);
+      });
+
+      dynamicDecks.addEventListener("click", (event) => {
+        const deleteBtn = event.target.closest(".delete-deck-btn");
+        if (deleteBtn) {
+          const card = deleteBtn.closest(".deck-card");
+          const deckId = card?.dataset.deckId;
+          const deckTitle = card?.querySelector("h3")?.textContent?.trim() || "this deck";
+          if (!deckId) return;
+          openDeleteConfirm(card, deckId, deckTitle);
+          return;
+        }
+
+        const btn = event.target.closest(".study-btn");
+        if (!btn) return;
+        const card = btn.closest(".deck-card");
+        const title = card?.querySelector("h3")?.textContent?.trim() || "Study Deck";
+        openStudyModal(title, card?._cards || []);
+      });
+
+      revealAnswerBtn.addEventListener("click", () => {
+        studyAnswerWrap.hidden = false;
+      });
+
+      nextFlashcardBtn.addEventListener("click", () => {
+        if (!activeStudyCards.length) return;
+        activeStudyIndex = (activeStudyIndex + 1) % activeStudyCards.length;
+        renderStudyCard();
+      });
+
+      closeStudyModal.addEventListener("click", closeStudy);
+      studyModalBackdrop.addEventListener("click", (event) => {
+        if (event.target === studyModalBackdrop) closeStudy();
+      });
+
+      closeDeleteConfirm.addEventListener("click", closeDeleteModal);
+      cancelDeleteBtn.addEventListener("click", closeDeleteModal);
+      deleteConfirmBackdrop.addEventListener("click", (event) => {
+        if (event.target === deleteConfirmBackdrop) closeDeleteModal();
+      });
+      confirmDeleteBtn.addEventListener("click", async () => {
+        if (!pendingDeleteDeckId || !pendingDeleteCard) return;
+        try {
+          const response = await fetch(`${API}/decks/${pendingDeleteDeckId}`, {
+            method: "DELETE",
+          });
+          const data = await response.json().catch(() => ({}));
+          if (!response.ok) {
+            throw new Error(data.error || "Failed to delete deck.");
+          }
+          pendingDeleteCard.remove();
+          deckStatus.textContent = "Deck deleted.";
+          closeDeleteModal();
+        } catch (error) {
+          deckStatus.textContent = error.message || "Unable to delete deck.";
+        }
+      });
+
+      saveDeckBtn.addEventListener("click", async (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const chapter = document.getElementById("deckChapter").value.trim();
+        const notesTopic = document.getElementById("deckNotesTopic").value.trim();
+        const cards = Array.from(flashcardRows.querySelectorAll(".flashcard-row"))
+          .map((row) => ({
+            question: row.querySelector(".question-input").value.trim(),
+            answer: row.querySelector(".answer-input").value.trim(),
+          }))
+          .filter((card) => card.question && card.answer);
+
+        if (!chapter) {
+          deckStatus.textContent = "Chapter is required.";
+          return;
+        }
+        if (!cards.length) {
+          deckStatus.textContent = "Add at least one flashcard with question and answer.";
+          return;
+        }
+
+        try {
+          const response = await fetch(`${API}/decks`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ chapter, notesTopic, cards }),
+          });
+          const data = await response.json();
+          if (!response.ok) {
+            deckStatus.textContent = data.error || "Failed to save deck.";
+            return;
+          }
+          renderDeckCard(data.deck);
+          deckStatus.textContent = "Deck created successfully.";
+          document.getElementById("deckChapter").value = "";
+          document.getElementById("deckNotesTopic").value = "";
+          flashcardRows.innerHTML = "";
+          addFlashcardRow();
+        } catch {
+          deckStatus.textContent = "Backend unavailable. Start backend/app.py.";
+        }
+      });
+
+      const deckModal = document.querySelector(".deck-modal");
+      deckModal.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+        }
+      });
+      deckModal.addEventListener("click", (event) => {
+        event.stopPropagation();
+      });
+      document.addEventListener("submit", (event) => {
+        event.preventDefault();
+      });
+
+      addFlashcardRow();
+      loadDecks();
+    </script>
+  </body>
+</html>
