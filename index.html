@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyLounge Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <div class="sidebar-header">
+            <h1 class="brand"><span class="brand-full">Mevina</span><span class="brand-short">LA</span></h1>
+            <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Collapse sidebar" aria-expanded="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+            </button>
+          </div>
+          <p class="brand-subtitle">Academic Excellence</p>
+          <nav class="nav-group primary-nav" aria-label="Primary">
+            <a class="nav-item active" href="index.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="5" rx="1.5"></rect><rect x="13" y="11" width="7" height="9" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect></svg></span><span class="nav-label">Dashboard</span></a>
+            <a class="nav-item" href="notes.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5h10v14H8a3 3 0 0 0-3 3V8a3 3 0 0 1 3-3Z"></path><path d="M8 5v14"></path><path d="M11 9h5"></path><path d="M11 12h5"></path></svg></span><span class="nav-label">Notes</span></a>
+            <a class="nav-item" href="videos.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="6" width="16" height="12" rx="2"></rect><path d="m10 10 5 2-5 2v-4Z"></path></svg></span><span class="nav-label">Videos</span></a>
+          </nav>
+        </div>
+        <nav class="nav-group secondary-nav" aria-label="Secondary">
+          <a class="nav-item" href="#"><span class="nav-icon">👤</span><span class="nav-label">Profile</span></a>
+          <a class="nav-item" href="#"><span class="nav-icon">⚙</span><span class="nav-label">Settings</span></a>
+        </nav>
+      </aside>
+      <button class="sidebar-peek" id="sidebarPeek" type="button" aria-label="Slide to show sidebar"><span class="peek-grip"></span></button>
+
+      <div class="main-area">
+        <header class="top-bar">
+          <div class="top-left">
+            <button class="icon-btn sidebar-hide-btn" id="hideSidebarBtn" type="button" aria-label="Hide sidebar"><svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6"></path></svg></button>
+            <p class="product-name">StudyLounge</p>
+            <div class="search-box">Search your resources...</div>
+          </div>
+        </header>
+
+        <main class="content-area">
+          <section class="welcome-block">
+            <h2>Welcome back, Alex.</h2>
+            <p>You have completed <strong>85%</strong> of your weekly goals.</p>
+          </section>
+
+          <section class="card chat-panel" aria-label="Assistant chat" data-chat-bar data-chat-mode="home">
+            <div class="chat-header">
+              <div>
+                <h3>Chat with Sanctuary AI</h3>
+                <p>Available to assist with your Calculus and Physics modules.</p>
+              </div>
+              <span class="status-pill">Online</span>
+            </div>
+            <div class="chat-thread" id="chatThread" data-chat-thread></div>
+            <div class="chat-input-row">
+              <input id="chatInput" class="chat-input" data-chat-input placeholder="Ask your study assistant anything..." />
+              <button id="chatSend" class="send-btn" data-chat-send aria-label="Send message">→</button>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="shared.js"></script>
+  </body>
+</html>

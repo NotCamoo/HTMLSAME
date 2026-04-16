@@ -1,0 +1,14 @@
+@import url("../styles.css");
+
+/* Frontend-specific chat input tweaks */
+.chat-input,
+.ai-bubble-input {
+  width: 100%;
+  outline: none;
+}
+
+input.chat-input,
+input.ai-bubble-input {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+}

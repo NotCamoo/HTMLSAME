@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell videos-page">
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <div class="sidebar-header">
+            <h1 class="brand"><a class="brand-link" href="index.html"><span class="brand-full">Mevina</span><span class="brand-short">LA</span></a></h1>
+            <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Collapse sidebar" aria-expanded="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+            </button>
+          </div>
+          <p class="brand-subtitle">Academic Excellence</p>
+          <nav class="nav-group primary-nav" aria-label="Primary">
+            <a class="nav-item" href="index.html"><span class="nav-icon">🏠</span><span class="nav-label">Dashboard</span></a>
+            <a class="nav-item" href="notes.html"><span class="nav-icon">📝</span><span class="nav-label">Notes</span></a>
+            <a class="nav-item active" href="videos.html"><span class="nav-icon">🎬</span><span class="nav-label">Videos</span></a>
+          </nav>
+        </div>
+      </aside>
+      <button class="sidebar-peek" id="sidebarPeek" type="button" aria-label="Slide to show sidebar"><span class="peek-grip"></span></button>
+      <div class="main-area">
+        <header class="top-bar">
+          <div class="top-left">
+            <button class="icon-btn sidebar-hide-btn" id="hideSidebarBtn" type="button" aria-label="Hide sidebar"><svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6"></path></svg></button>
+            <p class="product-name">StudyLounge</p>
+            <div class="search-box">Search lectures...</div>
+          </div>
+        </header>
+        <main class="content-area">
+          <section class="vault-hero video-hero">
+            <div><h2>Video Library</h2><p>Continue your learning journey with available lectures.</p></div>
+            <button class="resume-btn" type="button">▶ Resume Last</button>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="shared.js"></script>
+  </body>
+</html>
