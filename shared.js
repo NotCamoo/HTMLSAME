@@ -1,4 +1,4 @@
-const CHAT_ENDPOINT = "http://127.0.0.1:5000/chat";
+const CHAT_ENDPOINT = "backend-production-3849.up.railway.app";
 
 function initSidebar() {
   const sidebarToggle = document.getElementById("sidebarToggle");
