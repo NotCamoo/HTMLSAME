@@ -7,35 +7,152 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="app-shell">
+    <div class="app-shell dashboard-page">
       <aside class="sidebar">
         <div class="sidebar-top">
           <div class="sidebar-header">
-            <h1 class="brand"><span class="brand-full">Mevina</span><span class="brand-short">LA</span></h1>
-            <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Collapse sidebar" aria-expanded="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+            <h1 class="brand">
+              <span class="brand-full">Mevina</span>
+              <span class="brand-short">LA</span>
+            </h1>
+            <button
+              class="sidebar-toggle"
+              id="sidebarToggle"
+              type="button"
+              aria-label="Collapse sidebar"
+              aria-expanded="true"
+            >
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 7h16"></path>
+                <path d="M4 12h16"></path>
+                <path d="M4 17h16"></path>
+              </svg>
             </button>
           </div>
           <p class="brand-subtitle">Academic Excellence</p>
           <nav class="nav-group primary-nav" aria-label="Primary">
-            <a class="nav-item active" href="index.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="5" rx="1.5"></rect><rect x="13" y="11" width="7" height="9" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect></svg></span><span class="nav-label">Dashboard</span></a>
-            <a class="nav-item" href="notes.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5h10v14H8a3 3 0 0 0-3 3V8a3 3 0 0 1 3-3Z"></path><path d="M8 5v14"></path><path d="M11 9h5"></path><path d="M11 12h5"></path></svg></span><span class="nav-label">Notes</span></a>
-            <a class="nav-item" href="videos.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="6" width="16" height="12" rx="2"></rect><path d="m10 10 5 2-5 2v-4Z"></path></svg></span><span class="nav-label">Videos</span></a>
+            <a class="nav-item active" href="index.html">
+              <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="4" y="4" width="7" height="7" rx="1.5"></rect>
+                  <rect x="13" y="4" width="7" height="5" rx="1.5"></rect>
+                  <rect x="13" y="11" width="7" height="9" rx="1.5"></rect>
+                  <rect x="4" y="13" width="7" height="7" rx="1.5"></rect>
+                </svg>
+              </span>
+              <span class="nav-label">Dashboard</span>
+            </a>
+            <a class="nav-item" href="notes.html">
+              <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M8 5h10v14H8a3 3 0 0 0-3 3V8a3 3 0 0 1 3-3Z"></path>
+                  <path d="M8 5v14"></path>
+                  <path d="M11 9h5"></path>
+                  <path d="M11 12h5"></path>
+                </svg>
+              </span>
+              <span class="nav-label">Notes</span>
+            </a>
+            <a class="nav-item" href="videos.html">
+              <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="4" y="6" width="16" height="12" rx="2"></rect>
+                  <path d="m10 10 5 2-5 2v-4Z"></path>
+                </svg>
+              </span>
+              <span class="nav-label">Videos</span>
+            </a>
+            <a class="nav-item" href="flashcards.html">
+              <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="4" y="5" width="7" height="14" rx="1.5"></rect>
+                  <rect x="13" y="5" width="7" height="14" rx="1.5"></rect>
+                  <path d="M8 8h0"></path>
+                  <path d="M16 8h0"></path>
+                </svg>
+              </span>
+              <span class="nav-label">Flashcards</span>
+            </a>
+            <a class="nav-item" href="pyq-faq.html">
+              <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="8"></circle>
+                  <path d="M9.5 9a2.5 2.5 0 1 1 4.2 1.8c-.8.7-1.2 1.1-1.2 2.2"></path>
+                  <path d="M12 16h.01"></path>
+                </svg>
+              </span>
+              <span class="nav-label">PYQ/FAQ</span>
+            </a>
           </nav>
         </div>
+
         <nav class="nav-group secondary-nav" aria-label="Secondary">
-          <a class="nav-item" href="#"><span class="nav-icon">👤</span><span class="nav-label">Profile</span></a>
-          <a class="nav-item" href="#"><span class="nav-icon">⚙</span><span class="nav-label">Settings</span></a>
+          <a class="nav-item" href="#">
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="3"></circle>
+                <path d="M6 18a6 6 0 0 1 12 0"></path>
+              </svg>
+            </span>
+            <span class="nav-label">Profile</span>
+          </a>
+          <a class="nav-item" href="#">
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="m12 3 1.7 2.1 2.6-.2.7 2.5 2.3 1.2-1.2 2.3 1.2 2.3-2.3 1.2-.7 2.5-2.6-.2L12 21l-1.7-2.1-2.6.2-.7-2.5-2.3-1.2 1.2-2.3-1.2-2.3 2.3-1.2.7-2.5 2.6.2L12 3Z"
+                ></path>
+                <circle cx="12" cy="12" r="2.5"></circle>
+              </svg>
+            </span>
+            <span class="nav-label">Settings</span>
+          </a>
+          <a class="nav-item" href="#">
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 6h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H9l-4 3v-3H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"></path>
+                <path d="M8 10h8"></path>
+                <path d="M8 13h5"></path>
+              </svg>
+            </span>
+            <span class="nav-label">Feedback</span>
+          </a>
         </nav>
       </aside>
-      <button class="sidebar-peek" id="sidebarPeek" type="button" aria-label="Slide to show sidebar"><span class="peek-grip"></span></button>
+      <button
+        class="sidebar-peek"
+        id="sidebarPeek"
+        type="button"
+        aria-label="Slide to show sidebar"
+      >
+        <span class="peek-grip" aria-hidden="true"></span>
+      </button>
 
       <div class="main-area">
         <header class="top-bar">
           <div class="top-left">
-            <button class="icon-btn sidebar-hide-btn" id="hideSidebarBtn" type="button" aria-label="Hide sidebar"><svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6"></path></svg></button>
+            <button
+              class="icon-btn sidebar-hide-btn"
+              id="hideSidebarBtn"
+              type="button"
+              aria-label="Hide sidebar"
+            >
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M15 6l-6 6 6 6"></path>
+              </svg>
+            </button>
             <p class="product-name">StudyLounge</p>
-            <div class="search-box">Search your resources...</div>
+            <div class="search-box" aria-label="Search resources">
+              Search your resources...
+            </div>
+          </div>
+          <div class="top-right">
+            <button class="icon-btn" aria-label="Notifications">!</button>
+            <div class="user-summary">
+              <p class="user-name">Alex Rivera</p>
+              <p class="user-role">Premium Scholar</p>
+            </div>
+            <div class="avatar" aria-hidden="true">AR</div>
           </div>
         </header>
 
@@ -45,7 +162,72 @@
             <p>You have completed <strong>85%</strong> of your weekly goals.</p>
           </section>
 
-          <section class="card chat-panel" aria-label="Assistant chat" data-chat-bar data-chat-mode="home">
+          <section class="cards-and-notices">
+            <div class="lesson-cards">
+              <article class="card lesson-card">
+                <div class="card-head">
+                  <span class="dot-icon"></span>
+                  <button class="icon-btn small" aria-label="Expand card">↗</button>
+                </div>
+                <h3>Advanced Calculus II</h3>
+                <p>
+                  The Fundamental Theorem of Calculus establishes a connection
+                  between differentiation and integration.
+                </p>
+                <div class="chip-row">
+                  <span class="chip">Mathematics</span>
+                  <span class="meta">Updated 2h ago</span>
+                </div>
+                <div class="progress-track">
+                  <span class="progress-fill w-70"></span>
+                </div>
+              </article>
+
+              <article class="card lesson-card">
+                <div class="card-head">
+                  <span class="dot-icon"></span>
+                  <button class="icon-btn small" aria-label="Expand card">↗</button>
+                </div>
+                <h3>Quantum Mechanics</h3>
+                <p>
+                  Professor Dr. Elena Vance · 12:45 remaining for this module.
+                </p>
+                <div class="chip-row">
+                  <span class="chip">Physics</span>
+                  <span class="meta">Live session</span>
+                </div>
+                <div class="progress-track">
+                  <span class="progress-fill w-45"></span>
+                </div>
+              </article>
+            </div>
+
+            <article class="card notices-card">
+              <div class="card-head">
+                <h3>Notices</h3>
+                <button class="icon-btn small" aria-label="Expand notices">↗</button>
+              </div>
+              <div class="notice-item">
+                <p class="notice-label">Upcoming Exam</p>
+                <p class="notice-title">Mid-term Schedule Published</p>
+                <p class="notice-text">
+                  Check the examination portal for your specific slot.
+                </p>
+              </div>
+              <div class="notice-item">
+                <p class="notice-label">Maintenance</p>
+                <p class="notice-title">Server Maintenance: Sunday</p>
+                <p class="notice-text">StudyLounge will be offline for 2 hours.</p>
+              </div>
+              <div class="notice-item">
+                <p class="notice-label">New Feature</p>
+                <p class="notice-title">Flashcard Deck Builder 2.0</p>
+                <p class="notice-text">AI-powered deck generation is now active.</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="card chat-panel" aria-label="Assistant chat">
             <div class="chat-header">
               <div>
                 <h3>Chat with Sanctuary AI</h3>
@@ -53,15 +235,141 @@
               </div>
               <span class="status-pill">Online</span>
             </div>
-            <div class="chat-thread" id="chatThread" data-chat-thread></div>
+
+            <div class="chat-thread" id="chatThread">
+            </div>
+
             <div class="chat-input-row">
-              <input id="chatInput" class="chat-input" data-chat-input placeholder="Ask your study assistant anything..." />
-              <button id="chatSend" class="send-btn" data-chat-send aria-label="Send message">→</button>
+              <input
+                id="chatInput"
+                class="chat-input"
+                type="text"
+                placeholder="Ask your study assistant anything..."
+              />
+              <button id="chatSendBtn" class="send-btn" aria-label="Send message">→</button>
             </div>
           </section>
         </main>
       </div>
     </div>
-    <script src="shared.js"></script>
+    <script>
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      const hideSidebarBtn = document.getElementById("hideSidebarBtn");
+      const sidebarPeek = document.getElementById("sidebarPeek");
+      const root = document.body;
+
+      sidebarToggle.addEventListener("click", () => {
+        const isCollapsed = root.classList.toggle("sidebar-collapsed");
+        sidebarToggle.setAttribute("aria-expanded", String(!isCollapsed));
+        sidebarToggle.setAttribute(
+          "aria-label",
+          isCollapsed ? "Expand sidebar" : "Collapse sidebar"
+        );
+      });
+
+      const updateHideButtonState = () => {
+        const isHidden = root.classList.contains("sidebar-hidden");
+        hideSidebarBtn.classList.toggle("is-flipped", isHidden);
+        hideSidebarBtn.setAttribute(
+          "aria-label",
+          isHidden ? "Show sidebar" : "Hide sidebar"
+        );
+      };
+
+      const showSidebar = () => {
+        root.classList.remove("sidebar-hidden");
+        updateHideButtonState();
+      };
+
+      const hideSidebar = () => {
+        root.classList.remove("sidebar-collapsed");
+        sidebarToggle.setAttribute("aria-expanded", "true");
+        sidebarToggle.setAttribute("aria-label", "Collapse sidebar");
+        root.classList.add("sidebar-hidden");
+        updateHideButtonState();
+      };
+
+      hideSidebarBtn.addEventListener("click", () => {
+        const isHidden = root.classList.contains("sidebar-hidden");
+        if (isHidden) {
+          showSidebar();
+          return;
+        }
+        hideSidebar();
+      });
+      sidebarPeek.addEventListener("click", showSidebar);
+
+      let dragStartX = 0;
+      let isDraggingPeek = false;
+
+      sidebarPeek.addEventListener("pointerdown", (event) => {
+        isDraggingPeek = true;
+        dragStartX = event.clientX;
+        sidebarPeek.setPointerCapture(event.pointerId);
+      });
+
+      sidebarPeek.addEventListener("pointermove", (event) => {
+        if (!isDraggingPeek) return;
+        if (event.clientX - dragStartX > 60) {
+          showSidebar();
+          isDraggingPeek = false;
+        }
+      });
+
+      const endPeekDrag = () => {
+        isDraggingPeek = false;
+      };
+
+      sidebarPeek.addEventListener("pointerup", endPeekDrag);
+      sidebarPeek.addEventListener("pointercancel", endPeekDrag);
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth <= 980) {
+          root.classList.remove("sidebar-hidden");
+          updateHideButtonState();
+        }
+      });
+
+      const chatThread = document.getElementById("chatThread");
+      const chatInput = document.getElementById("chatInput");
+      const chatSendBtn = document.getElementById("chatSendBtn");
+
+      const appendChatBubble = (role, text) => {
+        const bubble = document.createElement("div");
+        bubble.className = role === "user" ? "bubble bubble-user" : "bubble bubble-ai";
+        bubble.textContent = text;
+        chatThread.appendChild(bubble);
+        chatThread.scrollTop = chatThread.scrollHeight;
+      };
+
+      const sendDashboardChat = async () => {
+        const message = chatInput.value.trim();
+        if (!message) return;
+        appendChatBubble("user", message);
+        chatInput.value = "";
+
+        try {
+          const response = await fetch("http://127.0.0.1:5000/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message }),
+          });
+          const data = await response.json();
+          appendChatBubble("ai", data.reply || "I am here to help.");
+        } catch {
+          appendChatBubble("ai", "Backend unavailable. Please run backend/app.py.");
+        }
+      };
+
+      chatSendBtn.addEventListener("click", sendDashboardChat);
+      chatInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          sendDashboardChat();
+        }
+      });
+
+      updateHideButtonState();
+    </script>
   </body>
 </html>
