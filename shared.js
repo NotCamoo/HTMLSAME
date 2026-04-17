@@ -1,4 +1,4 @@
-const CHAT_ENDPOINT = "backend-production-3849.up.railway.app";
+const CHAT_ENDPOINT = "backend.railway.internal";
 
 function initSidebar() {
   const sidebarToggle = document.getElementById("sidebarToggle");
