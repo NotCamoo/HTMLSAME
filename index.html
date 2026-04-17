@@ -349,7 +349,7 @@
         chatInput.value = "";
 
         try {
-          const response = await fetch("backend-production-3849.up.railway.app", {
+          const response = await fetch("backend.railway.internal", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ message }),
