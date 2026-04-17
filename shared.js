@@ -1,4 +1,4 @@
-const CHAT_ENDPOINT = "https.//backend-production-3849.up.railway.app";
+const CHAT_ENDPOINT = "https://backend-production-3849.up.railway.app";
 
 function initSidebar() {
   const sidebarToggle = document.getElementById("sidebarToggle");
